@@ -3,18 +3,21 @@ import { useState } from "react";
 import { Menu, X, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./ThemeToggle";
+import { LanguageToggle } from "./LanguageToggle";
+import { useT, type TKey } from "@/lib/i18n";
 
-const nav = [
-  { to: "/", label: "Home" },
-  { to: "/courses", label: "Courses" },
-  { to: "/corporate", label: "Corporate" },
-  { to: "/custom", label: "Custom Learning" },
-  { to: "/about", label: "About" },
-  { to: "/contact", label: "Contact" },
+const nav: { to: string; key: TKey }[] = [
+  { to: "/", key: "nav.home" },
+  { to: "/courses", key: "nav.courses" },
+  { to: "/corporate", key: "nav.corporate" },
+  { to: "/custom", key: "nav.custom" },
+  { to: "/about", key: "nav.about" },
+  { to: "/contact", key: "nav.contact" },
 ];
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const { t } = useT();
   return (
     <header className="fixed top-0 z-50 w-full border-b border-border/40 glass">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
@@ -33,22 +36,24 @@ export function Header() {
               className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
               activeProps={{ className: "text-foreground" }}
             >
-              {n.label}
+              {t(n.key)}
             </Link>
           ))}
         </nav>
 
         <div className="hidden items-center gap-2 md:flex">
+          <LanguageToggle />
           <ThemeToggle />
           <Button asChild variant="ghost" size="sm">
-            <Link to="/contact">Sign in</Link>
+            <Link to="/contact">{t("nav.signin")}</Link>
           </Button>
           <Button asChild size="sm" className="bg-gradient-primary text-primary-foreground hover:opacity-90">
-            <Link to="/custom">Get started</Link>
+            <Link to="/custom">{t("nav.cta")}</Link>
           </Button>
         </div>
 
         <div className="flex items-center gap-1 md:hidden">
+          <LanguageToggle />
           <ThemeToggle />
           <Button variant="ghost" size="icon" onClick={() => setOpen(!open)} aria-label="Menu">
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -66,11 +71,11 @@ export function Header() {
                 onClick={() => setOpen(false)}
                 className="rounded-md px-3 py-2 text-sm font-medium hover:bg-secondary"
               >
-                {n.label}
+                {t(n.key)}
               </Link>
             ))}
             <Button asChild className="mt-2 bg-gradient-primary text-primary-foreground">
-              <Link to="/custom" onClick={() => setOpen(false)}>Get started</Link>
+              <Link to="/custom" onClick={() => setOpen(false)}>{t("nav.cta")}</Link>
             </Button>
           </div>
         </div>

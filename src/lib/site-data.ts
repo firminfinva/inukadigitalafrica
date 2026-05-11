@@ -3,26 +3,27 @@ import {
   MessageSquare, BarChart3, ShieldCheck, Code2,
   type LucideIcon,
 } from "lucide-react";
+import type { TKey } from "@/lib/i18n";
 
 export type Category = {
   slug: string;
-  title: string;
-  description: string;
+  titleKey: TKey;
+  descKey: TKey;
   icon: LucideIcon;
-  duration: string;
+  weeks: number;
   modules: number;
-  level: string;
+  levelKey: TKey;
 };
 
 export const categories: Category[] = [
-  { slug: "business-management", title: "Business Management", description: "Strategy, operations, and modern leadership for growing organizations.", icon: Briefcase, duration: "6 weeks", modules: 8, level: "All levels" },
-  { slug: "artificial-intelligence", title: "Artificial Intelligence", description: "From foundations to applied AI: LLMs, agents, and real-world deployment.", icon: Brain, duration: "8 weeks", modules: 10, level: "Beginner → Advanced" },
-  { slug: "technology-digital", title: "Technology & Digital Skills", description: "Master the digital toolkit every modern professional needs.", icon: Cpu, duration: "4 weeks", modules: 6, level: "Beginner" },
-  { slug: "leadership", title: "Leadership", description: "Lead teams with clarity, empathy, and decisive execution.", icon: Crown, duration: "5 weeks", modules: 7, level: "Mid → Senior" },
-  { slug: "entrepreneurship", title: "Entrepreneurship", description: "Validate, build, and grow ventures from idea to traction.", icon: Rocket, duration: "8 weeks", modules: 9, level: "All levels" },
-  { slug: "office-tools", title: "Office & Enterprise Tools", description: "Excel, Google Workspace, Notion, and modern productivity stacks.", icon: FileSpreadsheet, duration: "3 weeks", modules: 5, level: "Beginner" },
-  { slug: "communication", title: "Communication Skills", description: "Speak, write, and present with influence in any room.", icon: MessageSquare, duration: "4 weeks", modules: 6, level: "All levels" },
-  { slug: "data-analysis", title: "Data Analysis", description: "From spreadsheets to SQL and Python — turn data into decisions.", icon: BarChart3, duration: "7 weeks", modules: 9, level: "Beginner → Intermediate" },
-  { slug: "cybersecurity", title: "Cybersecurity", description: "Defend systems, audit risk, and protect what matters most.", icon: ShieldCheck, duration: "8 weeks", modules: 10, level: "Intermediate" },
-  { slug: "software-development", title: "Software Development", description: "Full-stack engineering with modern frameworks and best practices.", icon: Code2, duration: "12 weeks", modules: 14, level: "Beginner → Advanced" },
+  { slug: "business-management", titleKey: "c.business.t", descKey: "c.business.d", icon: Briefcase, weeks: 6, modules: 8, levelKey: "cat.allLevels" },
+  { slug: "artificial-intelligence", titleKey: "c.ai.t", descKey: "c.ai.d", icon: Brain, weeks: 8, modules: 10, levelKey: "cat.beginnerAdv" },
+  { slug: "technology-digital", titleKey: "c.tech.t", descKey: "c.tech.d", icon: Cpu, weeks: 4, modules: 6, levelKey: "cat.beginner" },
+  { slug: "leadership", titleKey: "c.lead.t", descKey: "c.lead.d", icon: Crown, weeks: 5, modules: 7, levelKey: "cat.midSenior" },
+  { slug: "entrepreneurship", titleKey: "c.entre.t", descKey: "c.entre.d", icon: Rocket, weeks: 8, modules: 9, levelKey: "cat.allLevels" },
+  { slug: "office-tools", titleKey: "c.office.t", descKey: "c.office.d", icon: FileSpreadsheet, weeks: 3, modules: 5, levelKey: "cat.beginner" },
+  { slug: "communication", titleKey: "c.comm.t", descKey: "c.comm.d", icon: MessageSquare, weeks: 4, modules: 6, levelKey: "cat.allLevels" },
+  { slug: "data-analysis", titleKey: "c.data.t", descKey: "c.data.d", icon: BarChart3, weeks: 7, modules: 9, levelKey: "cat.beginnerInter" },
+  { slug: "cybersecurity", titleKey: "c.cyber.t", descKey: "c.cyber.d", icon: ShieldCheck, weeks: 8, modules: 10, levelKey: "cat.intermediate" },
+  { slug: "software-development", titleKey: "c.dev.t", descKey: "c.dev.d", icon: Code2, weeks: 12, modules: 14, levelKey: "cat.beginnerAdv" },
 ];
