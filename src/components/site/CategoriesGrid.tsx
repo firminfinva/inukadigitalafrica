@@ -1,8 +1,10 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowUpRight, Clock, Layers } from "lucide-react";
 import { categories } from "@/lib/site-data";
+import { useT } from "@/lib/i18n";
 
 export function CategoriesGrid({ limit }: { limit?: number }) {
+  const { t } = useT();
   const list = limit ? categories.slice(0, limit) : categories;
   return (
     <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -20,16 +22,16 @@ export function CategoriesGrid({ limit }: { limit?: number }) {
               <div className="grid h-11 w-11 place-items-center rounded-xl bg-gradient-primary text-primary-foreground shadow-glow">
                 <Icon className="h-5 w-5" />
               </div>
-              <h3 className="mt-5 font-display text-lg font-semibold">{c.title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{c.description}</p>
+              <h3 className="mt-5 font-display text-lg font-semibold">{t(c.titleKey)}</h3>
+              <p className="mt-2 text-sm text-muted-foreground">{t(c.descKey)}</p>
               <div className="mt-5 flex items-center gap-4 text-xs text-muted-foreground">
-                <span className="inline-flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" />{c.duration}</span>
-                <span className="inline-flex items-center gap-1.5"><Layers className="h-3.5 w-3.5" />{c.modules} modules</span>
+                <span className="inline-flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" />{c.weeks} {t("cat.weeks")}</span>
+                <span className="inline-flex items-center gap-1.5"><Layers className="h-3.5 w-3.5" />{c.modules} {t("cat.modules")}</span>
               </div>
               <div className="mt-5 flex items-center justify-between text-sm">
-                <span className="rounded-full bg-secondary px-2.5 py-1 text-xs">{c.level}</span>
+                <span className="rounded-full bg-secondary px-2.5 py-1 text-xs">{t(c.levelKey)}</span>
                 <span className="inline-flex items-center gap-1 font-medium text-foreground transition-transform group-hover:translate-x-1">
-                  View <ArrowUpRight className="h-4 w-4" />
+                  {t("cat.view")} <ArrowUpRight className="h-4 w-4" />
                 </span>
               </div>
             </div>

@@ -3,31 +3,29 @@ import { SiteLayout } from "@/components/site/SiteLayout";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { WhyChoose } from "@/components/site/WhyChoose";
 import { Testimonials } from "@/components/site/Testimonials";
+import { useT } from "@/lib/i18n";
 
 export const Route = createFileRoute("/about")({
   component: AboutPage,
   head: () => ({
     meta: [
-      { title: "About — Lumina Academy" },
-      { name: "description", content: "Our mission, vision, and method for building future-ready talent across Africa and beyond." },
+      { title: "À propos — Lumina Academy" },
+      { name: "description", content: "Notre mission, vision et méthode pour bâtir les talents du futur en Afrique et au-delà." },
     ],
   }),
 });
 
 function AboutPage() {
+  const { t } = useT();
   return (
     <SiteLayout>
       <section className="container mx-auto px-4 py-20">
-        <SectionHeading
-          eyebrow="About us"
-          title="Building Africa's future workforce, one skill at a time"
-          subtitle="Lumina Academy was founded with one belief: world-class training should be accessible to every ambitious learner and every forward-thinking organization."
-        />
+        <SectionHeading eyebrow={t("about.eyebrow")} title={t("page.about.t")} subtitle={t("page.about.s")} />
         <div className="mx-auto grid max-w-5xl gap-5 md:grid-cols-3">
           {[
-            { t: "Mission", d: "Equip 1 million learners with future-ready skills by 2030." },
-            { t: "Vision", d: "An Africa where talent leads global innovation." },
-            { t: "Values", d: "Excellence, accessibility, practicality, and curiosity." },
+            { t: t("about.b1.t"), d: t("about.b1.d") },
+            { t: t("about.b2.t"), d: t("about.b2.d") },
+            { t: t("about.values"), d: t("about.values.d") },
           ].map((b) => (
             <div key={b.t} className="rounded-2xl border border-border bg-gradient-card p-6 shadow-card">
               <h3 className="font-display text-lg font-semibold">{b.t}</h3>
@@ -39,13 +37,13 @@ function AboutPage() {
 
       <section className="bg-secondary/30 py-20">
         <div className="container mx-auto px-4">
-          <SectionHeading eyebrow="What sets us apart" title="A modern academy built for impact" />
+          <SectionHeading eyebrow={t("page.about.what")} title={t("page.about.modern")} />
           <WhyChoose />
         </div>
       </section>
 
       <section className="container mx-auto px-4 py-20">
-        <SectionHeading eyebrow="Voices" title="Stories from our community" />
+        <SectionHeading eyebrow={t("page.about.voices")} title={t("page.about.stories")} />
         <Testimonials />
       </section>
     </SiteLayout>

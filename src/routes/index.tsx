@@ -12,18 +12,20 @@ import { CustomLearningForm } from "@/components/site/CustomLearningForm";
 import { Button } from "@/components/ui/button";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
+import { useT } from "@/lib/i18n";
 
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Lumina Academy — Future-ready training in AI, leadership & tech" },
-      { name: "description", content: "Premium training academy: AI, leadership, data, cybersecurity, software, and more — for individuals, enterprises, and governments." },
+      { title: "Lumina Academy — Formations IA, leadership & tech" },
+      { name: "description", content: "Académie de formation moderne : IA, leadership, data, cybersécurité, software pour particuliers, entreprises et gouvernements." },
     ],
   }),
 });
 
 function Index() {
+  const { t } = useT();
   return (
     <SiteLayout>
       <Hero />
@@ -34,20 +36,20 @@ function Index() {
           <div>
             <SectionHeading
               align="left"
-              eyebrow="About us"
-              title="Empowering people to thrive in the future of work."
-              subtitle="Lumina Academy was built to close the gap between fast-moving technology and the talent that drives organizations forward. We design programs for professionals, youth, and institutions ready to lead what comes next."
+              eyebrow={t("about.eyebrow")}
+              title={t("about.title")}
+              subtitle={t("about.subtitle")}
             />
             <Button asChild variant="outline">
-              <Link to="/about">Read our story <ArrowRight className="ml-2 h-4 w-4" /></Link>
+              <Link to="/about">{t("about.read")} <ArrowRight className="ml-2 h-4 w-4" /></Link>
             </Button>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {[
-              { t: "Our mission", d: "Equip 1 million learners with future-ready skills by 2030." },
-              { t: "Our vision", d: "An Africa where talent leads global innovation." },
-              { t: "Our method", d: "Practical, project-based, AI-personalized." },
-              { t: "Our promise", d: "Programs that translate to real outcomes." },
+              { t: t("about.b1.t"), d: t("about.b1.d") },
+              { t: t("about.b2.t"), d: t("about.b2.d") },
+              { t: t("about.b3.t"), d: t("about.b3.d") },
+              { t: t("about.b4.t"), d: t("about.b4.d") },
             ].map((b) => (
               <div key={b.t} className="rounded-2xl border border-border bg-gradient-card p-5 shadow-card">
                 <div className="font-display font-semibold">{b.t}</div>
@@ -61,15 +63,11 @@ function Index() {
       {/* Categories */}
       <section className="bg-secondary/30 py-24">
         <div className="container mx-auto px-4">
-          <SectionHeading
-            eyebrow="Course categories"
-            title="Programs across the skills that matter most"
-            subtitle="From AI to leadership — practical curricula designed by industry experts."
-          />
+          <SectionHeading eyebrow={t("cat.eyebrow")} title={t("cat.title")} subtitle={t("cat.subtitle")} />
           <CategoriesGrid />
           <div className="mt-12 text-center">
             <Button asChild size="lg" className="bg-gradient-primary text-primary-foreground">
-              <Link to="/courses">Browse all courses <ArrowRight className="ml-2 h-4 w-4" /></Link>
+              <Link to="/courses">{t("cat.browse")} <ArrowRight className="ml-2 h-4 w-4" /></Link>
             </Button>
           </div>
         </div>
@@ -77,11 +75,7 @@ function Index() {
 
       {/* Custom learning */}
       <section className="container mx-auto px-4 py-24">
-        <SectionHeading
-          eyebrow="Custom learning"
-          title="Tell us what you want to learn"
-          subtitle="We'll design a tailored program for you, your team, or your institution."
-        />
+        <SectionHeading eyebrow={t("cl.eyebrow")} title={t("cl.title")} subtitle={t("cl.subtitle")} />
         <CustomLearningForm />
       </section>
 
@@ -90,31 +84,31 @@ function Index() {
         <CorporateCTA />
       </section>
 
-      {/* Why choose us */}
+      {/* Why */}
       <section className="bg-secondary/30 py-24">
         <div className="container mx-auto px-4">
-          <SectionHeading eyebrow="Why Lumina" title="Designed to deliver real outcomes" />
+          <SectionHeading eyebrow={t("why.eyebrow")} title={t("why.title")} />
           <WhyChoose />
         </div>
       </section>
 
       {/* Testimonials */}
       <section className="container mx-auto px-4 py-24">
-        <SectionHeading eyebrow="Testimonials" title="Trusted by ambitious learners and teams" />
+        <SectionHeading eyebrow={t("test.eyebrow")} title={t("test.title")} />
         <Testimonials />
       </section>
 
       {/* Pricing */}
       <section className="bg-secondary/30 py-24">
         <div className="container mx-auto px-4">
-          <SectionHeading eyebrow="Pricing" title="Simple plans for every stage" subtitle="Switch or cancel anytime. Enterprise plans built for your needs." />
+          <SectionHeading eyebrow={t("pr.eyebrow")} title={t("pr.title")} subtitle={t("pr.subtitle")} />
           <Pricing />
         </div>
       </section>
 
       {/* FAQ */}
       <section className="container mx-auto px-4 py-24">
-        <SectionHeading eyebrow="FAQ" title="Questions, answered" />
+        <SectionHeading eyebrow={t("faq.eyebrow")} title={t("faq.title")} />
         <FAQ />
       </section>
 
@@ -123,12 +117,12 @@ function Index() {
         <div className="relative overflow-hidden rounded-3xl border border-border bg-gradient-primary p-10 text-center shadow-elegant md:p-16">
           <div className="absolute inset-0 grid-bg opacity-30" aria-hidden />
           <div className="relative">
-            <h2 className="font-display text-3xl font-bold text-primary-foreground md:text-5xl">Ready to build your future skills?</h2>
-            <p className="mx-auto mt-4 max-w-xl text-primary-foreground/85">Join thousands of learners and organizations growing with Lumina Academy.</p>
+            <h2 className="font-display text-3xl font-bold text-primary-foreground md:text-5xl">{t("fcta.title")}</h2>
+            <p className="mx-auto mt-4 max-w-xl text-primary-foreground/85">{t("fcta.sub")}</p>
             <div className="mt-7 flex flex-wrap justify-center gap-3">
-              <Button asChild size="lg" variant="secondary"><Link to="/courses">Browse courses</Link></Button>
+              <Button asChild size="lg" variant="secondary"><Link to="/courses">{t("fcta.browse")}</Link></Button>
               <Button asChild size="lg" variant="outline" className="border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10">
-                <Link to="/contact">Contact us</Link>
+                <Link to="/contact">{t("fcta.contact")}</Link>
               </Button>
             </div>
           </div>
