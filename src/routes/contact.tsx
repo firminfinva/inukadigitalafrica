@@ -13,8 +13,8 @@ export const Route = createFileRoute("/contact")({
   component: ContactPage,
   head: () => ({
     meta: [
-      { title: "Contact — Lumina Academy" },
-      { name: "description", content: "Joignez Lumina Academy par email, WhatsApp ou réseaux sociaux. Réponse sous 24h." },
+      { title: "Contact — Inuka Digital Africa" },
+      { name: "description", content: "Joignez Inuka Digital Africa par email, WhatsApp ou réseaux sociaux. Réponse sous 24h." },
     ],
   }),
 });
@@ -34,7 +34,7 @@ function ContactPage() {
 
         <div className="mx-auto grid max-w-5xl gap-8 lg:grid-cols-5">
           <div className="lg:col-span-2 space-y-4">
-            <ContactItem icon={Mail} label={t("ct.email")} value="hello@lumina.academy" href="mailto:hello@lumina.academy" />
+            <ContactItem icon={Mail} label={t("ct.email")} value="hello@inukadigital.africa" href="mailto:hello@inukadigital.africa" />
             <ContactItem icon={MessageCircle} label={t("ct.whatsapp")} value="+000 000 000" href="https://wa.me/0000000000" />
             <div className="rounded-2xl border border-border bg-gradient-card p-5 shadow-card">
               <div className="text-sm font-semibold">{t("ct.follow")}</div>

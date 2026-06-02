@@ -18,7 +18,7 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Lumina Academy — Formations IA, leadership & tech" },
+      { title: "Inuka Digital Africa — Formations IA, leadership & tech" },
       { name: "description", content: "Académie de formation moderne : IA, leadership, data, cybersécurité, software pour particuliers, entreprises et gouvernements." },
     ],
   }),

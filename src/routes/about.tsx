@@ -9,7 +9,7 @@ export const Route = createFileRoute("/about")({
   component: AboutPage,
   head: () => ({
     meta: [
-      { title: "À propos — Lumina Academy" },
+      { title: "À propos — Inuka Digital Africa" },
       { name: "description", content: "Notre mission, vision et méthode pour bâtir les talents du futur en Afrique et au-delà." },
     ],
   }),

@@ -36,7 +36,7 @@ export function Footer() {
         <div>
           <h4 className="mb-3 text-sm font-semibold">{t("footer.reach")}</h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li className="flex items-center gap-2"><Mail className="h-4 w-4" /><span>hello@lumina.academy</span></li>
+            <li className="flex items-center gap-2"><Mail className="h-4 w-4" /><span>hello@inukadigital.africa</span></li>
             <li className="flex items-center gap-2"><MessageCircle className="h-4 w-4" /><span>WhatsApp +000 000 000</span></li>
           </ul>
           <div className="mt-4 flex gap-2">
@@ -47,7 +47,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-border/60 py-6 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} Lumina Academy. {t("footer.rights")}
+        © {new Date().getFullYear()} Inuka Digital Africa. {t("footer.rights")}
       </div>
     </footer>
   );

@@ -8,7 +8,7 @@ export const Route = createFileRoute("/custom")({
   component: CustomPage,
   head: () => ({
     meta: [
-      { title: "Formation sur mesure — Lumina Academy" },
+      { title: "Formation sur mesure — Inuka Digital Africa" },
       { name: "description", content: "Demandez un programme de formation personnalisé pour vous ou votre équipe." },
     ],
   }),

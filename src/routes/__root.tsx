@@ -74,10 +74,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lumina Academy — Future-ready training in AI, leadership & tech" },
+      { title: "Inuka Digital Africa — Future-ready training in AI, leadership & tech" },
       { name: "description", content: "Modern training academy delivering AI, leadership, data, cybersecurity, and software courses for individuals, enterprises, and governments." },
-      { name: "author", content: "Lumina Academy" },
-      { property: "og:title", content: "Lumina Academy — Future-ready training" },
+      { name: "author", content: "Inuka Digital Africa" },
+      { property: "og:title", content: "Inuka Digital Africa — Future-ready training" },
       { property: "og:description", content: "Online, in-person, and corporate training programs designed for the future of work." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
