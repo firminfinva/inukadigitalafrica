@@ -9,7 +9,7 @@ export const Route = createFileRoute("/corporate")({
   component: CorporatePage,
   head: () => ({
     meta: [
-      { title: "Formation Entreprise — Lumina Academy" },
+      { title: "Formation Entreprise — Inuka Digital Africa" },
       { name: "description", content: "Programmes de formation pour entreprises, ONG et institutions gouvernementales." },
     ],
   }),

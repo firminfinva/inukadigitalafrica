@@ -23,8 +23,8 @@ export const dict = {
   "hero.title.orgs": { fr: "organisations", en: "organizations" },
   "hero.title.end": { fr: ".", en: " forward." },
   "hero.subtitle": {
-    fr: "Lumina Academy propose des formations pratiques de haut niveau en IA, leadership, data, cybersécurité et plus encore — pour les particuliers, les équipes et les institutions en Afrique et au-delà.",
-    en: "Lumina Academy delivers world-class, practical training in AI, leadership, data, cybersecurity and more — for individuals, teams, and institutions across Africa and beyond.",
+    fr: "Inuka Digital Africa propose des formations pratiques de haut niveau en IA, leadership, data, cybersécurité et plus encore — pour les particuliers, les équipes et les institutions en Afrique et au-delà.",
+    en: "Inuka Digital Africa delivers world-class, practical training in AI, leadership, data, cybersecurity and more — for individuals, teams, and institutions across Africa and beyond.",
   },
   "hero.explore": { fr: "Explorer les formations", en: "Explore courses" },
   "hero.custom": { fr: "Demander une formation sur mesure", en: "Request custom training" },
@@ -39,8 +39,8 @@ export const dict = {
   "about.eyebrow": { fr: "À propos", en: "About us" },
   "about.title": { fr: "Donner aux talents les moyens de réussir le futur du travail.", en: "Empowering people to thrive in the future of work." },
   "about.subtitle": {
-    fr: "Lumina Academy a été fondée pour combler l'écart entre les technologies en évolution rapide et les talents qui font avancer les organisations. Nous concevons des programmes pour les professionnels, les jeunes et les institutions prêts à mener ce qui vient.",
-    en: "Lumina Academy was built to close the gap between fast-moving technology and the talent that drives organizations forward. We design programs for professionals, youth, and institutions ready to lead what comes next.",
+    fr: "Inuka Digital Africa a été fondée pour combler l'écart entre les technologies en évolution rapide et les talents qui font avancer les organisations. Nous concevons des programmes pour les professionnels, les jeunes et les institutions prêts à mener ce qui vient.",
+    en: "Inuka Digital Africa was built to close the gap between fast-moving technology and the talent that drives organizations forward. We design programs for professionals, youth, and institutions ready to lead what comes next.",
   },
   "about.read": { fr: "Lire notre histoire", en: "Read our story" },
   "about.b1.t": { fr: "Notre mission", en: "Our mission" },
@@ -139,7 +139,7 @@ export const dict = {
   "corp.ngo.d": { fr: "Programmes alignés sur votre mission, livraison flexible.", en: "Mission-aligned programs with flexible delivery." },
 
   // Why
-  "why.eyebrow": { fr: "Pourquoi Lumina", en: "Why Lumina" },
+  "why.eyebrow": { fr: "Pourquoi Inuka", en: "Why Inuka" },
   "why.title": { fr: "Conçu pour produire des résultats concrets", en: "Designed to deliver real outcomes" },
   "why.1.t": { fr: "Formateurs experts", en: "Expert trainers" },
   "why.1.d": { fr: "Des praticiens du secteur avec un parcours éprouvé.", en: "Industry practitioners with proven track records." },
@@ -201,7 +201,7 @@ export const dict = {
   "faq.q1": { fr: "Les formations sont-elles disponibles en ligne et en présentiel ?", en: "Are courses available online and in person?" },
   "faq.a1": { fr: "Oui — chaque programme est proposé en ligne, en présentiel ou en format hybride.", en: "Yes — every program runs in online, in-person, or hybrid formats. Choose what fits your team." },
   "faq.q2": { fr: "Les apprenants reçoivent-ils des certificats ?", en: "Do learners receive certificates?" },
-  "faq.a2": { fr: "Oui. Chaque formation complétée donne droit à un certificat reconnu Lumina Academy.", en: "Yes. Every completed course awards a recognized Lumina Academy certificate of completion." },
+  "faq.a2": { fr: "Oui. Chaque formation complétée donne droit à un certificat reconnu Inuka Digital Africa.", en: "Yes. Every completed course awards a recognized Inuka Digital Africa certificate of completion." },
   "faq.q3": { fr: "Pouvez-vous concevoir un programme sur mesure pour mon entreprise ?", en: "Can you build a custom program for my company?" },
   "faq.a3": { fr: "Absolument. Utilisez notre formulaire de demande sur mesure et un stratège concevra un programme adapté.", en: "Absolutely. Use our Custom Learning request form and a strategist will design a program tailored to your goals." },
   "faq.q4": { fr: "Travaillez-vous avec les ONG et institutions gouvernementales ?", en: "Do you work with government and NGO institutions?" },
@@ -213,7 +213,7 @@ export const dict = {
 
   // Final CTA
   "fcta.title": { fr: "Prêt·e à construire vos compétences du futur ?", en: "Ready to build your future skills?" },
-  "fcta.sub": { fr: "Rejoignez des milliers d'apprenants et d'organisations qui grandissent avec Lumina Academy.", en: "Join thousands of learners and organizations growing with Lumina Academy." },
+  "fcta.sub": { fr: "Rejoignez des milliers d'apprenants et d'organisations qui grandissent avec Inuka Digital Africa.", en: "Join thousands of learners and organizations growing with Inuka Digital Africa." },
   "fcta.browse": { fr: "Voir les formations", en: "Browse courses" },
   "fcta.contact": { fr: "Nous contacter", en: "Contact us" },
 
@@ -252,7 +252,7 @@ export const dict = {
   "page.custom.s": { fr: "Partagez vos objectifs et nous concevrons un programme adapté à votre équipe, votre délai et vos résultats.", en: "Share your goals and we'll craft a program that fits your team, timeline, and outcomes." },
 
   "page.about.t": { fr: "Construire la main-d'œuvre future de l'Afrique, une compétence à la fois", en: "Building Africa's future workforce, one skill at a time" },
-  "page.about.s": { fr: "Lumina Academy a été fondée avec une conviction : la formation de classe mondiale doit être accessible à chaque apprenant ambitieux et chaque organisation tournée vers l'avenir.", en: "Lumina Academy was founded with one belief: world-class training should be accessible to every ambitious learner and every forward-thinking organization." },
+  "page.about.s": { fr: "Inuka Digital Africa a été fondée avec une conviction : la formation de classe mondiale doit être accessible à chaque apprenant ambitieux et chaque organisation tournée vers l'avenir.", en: "Inuka Digital Africa was founded with one belief: world-class training should be accessible to every ambitious learner and every forward-thinking organization." },
   "page.about.what": { fr: "Ce qui nous distingue", en: "What sets us apart" },
   "page.about.modern": { fr: "Une académie moderne conçue pour l'impact", en: "A modern academy built for impact" },
   "page.about.voices": { fr: "Voix", en: "Voices" },

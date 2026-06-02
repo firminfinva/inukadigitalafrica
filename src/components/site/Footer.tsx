@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { Sparkles, Mail, MessageCircle, Linkedin, Twitter, Instagram } from "lucide-react";
+import { Mail, MessageCircle, Linkedin, Twitter, Instagram } from "lucide-react";
+import logo from "@/assets/inuka-logo.png.asset.json";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useT } from "@/lib/i18n";
@@ -10,11 +11,9 @@ export function Footer() {
     <footer className="border-t border-border/60 bg-secondary/30">
       <div className="container mx-auto grid gap-10 px-4 py-16 md:grid-cols-4">
         <div className="md:col-span-2">
-          <Link to="/" className="flex items-center gap-2 font-display text-lg font-bold">
-            <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-primary">
-              <Sparkles className="h-5 w-5 text-primary-foreground" />
-            </span>
-            Lumina<span className="text-gradient">Academy</span>
+          <Link to="/" className="flex items-center gap-2 font-display text-base font-bold">
+            <img src={logo.url} alt="Inuka Digital Africa" className="h-9 w-9 object-contain" />
+            Inuka <span className="text-gradient">Digital Africa</span>
           </Link>
           <p className="mt-4 max-w-md text-sm text-muted-foreground">{t("footer.tagline")}</p>
           <form className="mt-6 flex max-w-md gap-2" onSubmit={(e) => e.preventDefault()}>
@@ -36,7 +35,7 @@ export function Footer() {
         <div>
           <h4 className="mb-3 text-sm font-semibold">{t("footer.reach")}</h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li className="flex items-center gap-2"><Mail className="h-4 w-4" /><span>hello@lumina.academy</span></li>
+            <li className="flex items-center gap-2"><Mail className="h-4 w-4" /><span>hello@inukadigital.africa</span></li>
             <li className="flex items-center gap-2"><MessageCircle className="h-4 w-4" /><span>WhatsApp +000 000 000</span></li>
           </ul>
           <div className="mt-4 flex gap-2">
@@ -47,7 +46,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-border/60 py-6 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} Lumina Academy. {t("footer.rights")}
+        © {new Date().getFullYear()} Inuka Digital Africa. {t("footer.rights")}
       </div>
     </footer>
   );
