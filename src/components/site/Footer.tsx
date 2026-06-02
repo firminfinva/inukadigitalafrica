@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { Sparkles, Mail, MessageCircle, Linkedin, Twitter, Instagram } from "lucide-react";
+import { Mail, MessageCircle, Linkedin, Twitter, Instagram } from "lucide-react";
+import logo from "@/assets/inuka-logo.png.asset.json";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useT } from "@/lib/i18n";
