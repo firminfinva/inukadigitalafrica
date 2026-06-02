@@ -1,8 +1,9 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X, Sparkles } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./ThemeToggle";
+import logo from "@/assets/inuka-logo.png.asset.json";
 import { LanguageToggle } from "./LanguageToggle";
 import { useT, type TKey } from "@/lib/i18n";
 
