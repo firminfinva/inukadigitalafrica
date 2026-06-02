@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./ThemeToggle";
-import logo from "@/assets/inuka-logo.png.asset.json";
+import logo from "@/assets/inuka-logo-full.png.asset.json";
 import { LanguageToggle } from "./LanguageToggle";
 import { useT, type TKey } from "@/lib/i18n";
 
@@ -22,9 +22,8 @@ export function Header() {
   return (
     <header className="fixed top-0 z-50 w-full border-b border-border/40 glass">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <Link to="/" className="flex items-center gap-2 font-display text-base font-bold">
-          <img src={logo.url} alt="Inuka Digital Africa" className="h-[54px] w-[54px] object-contain" />
-          <span>Inuka <span className="text-gradient">Digital Africa</span></span>
+        <Link to="/" className="flex items-center font-display text-base font-bold" aria-label="Inuka Digital Africa">
+          <img src={logo.url} alt="Inuka Digital Africa" className="h-12 w-auto object-contain" />
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">
