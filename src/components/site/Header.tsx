@@ -22,11 +22,9 @@ export function Header() {
   return (
     <header className="fixed top-0 z-50 w-full border-b border-border/40 glass">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <Link to="/" className="flex items-center gap-2 font-display text-lg font-bold">
-          <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-primary shadow-glow">
-            <Sparkles className="h-5 w-5 text-primary-foreground" />
-          </span>
-          <span>Lumina<span className="text-gradient">Academy</span></span>
+        <Link to="/" className="flex items-center gap-2 font-display text-base font-bold">
+          <img src={logo.url} alt="Inuka Digital Africa" className="h-9 w-9 object-contain" />
+          <span>Inuka <span className="text-gradient">Digital Africa</span></span>
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">
