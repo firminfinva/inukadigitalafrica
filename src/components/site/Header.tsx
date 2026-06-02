@@ -23,7 +23,7 @@ export function Header() {
     <header className="fixed top-0 z-50 w-full border-b border-border/40 glass">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link to="/" className="flex items-center gap-2 font-display text-base font-bold">
-          <img src={logo.url} alt="Inuka Digital Africa" className="h-9 w-9 object-contain" />
+          <img src={logo.url} alt="Inuka Digital Africa" className="h-[54px] w-[54px] object-contain" />
           <span>Inuka <span className="text-gradient">Digital Africa</span></span>
         </Link>
 
