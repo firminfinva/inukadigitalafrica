@@ -77,11 +77,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "Inuka Digital Africa — Future-ready training in AI, leadership & tech" },
       { name: "description", content: "Modern training academy delivering AI, leadership, data, cybersecurity, and software courses for individuals, enterprises, and governments." },
       { name: "author", content: "Inuka Digital Africa" },
-      { property: "og:title", content: "Inuka Digital Africa — Future-ready training" },
-      { property: "og:description", content: "Online, in-person, and corporate training programs designed for the future of work." },
+      { property: "og:title", content: "Inuka Digital Africa — Future-ready training in AI, leadership & tech" },
+      { property: "og:description", content: "Modern training academy delivering AI, leadership, data, cybersecurity, and software courses for individuals, enterprises, and governments." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Inuka Digital Africa — Future-ready training in AI, leadership & tech" },
+      { name: "twitter:description", content: "Modern training academy delivering AI, leadership, data, cybersecurity, and software courses for individuals, enterprises, and governments." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c31b581e-4ff8-48df-8ac2-16a9b4883270/id-preview-770c08eb--2ad852c4-fc5e-493c-a585-26daf46ebaa5.lovable.app-1780431287502.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c31b581e-4ff8-48df-8ac2-16a9b4883270/id-preview-770c08eb--2ad852c4-fc5e-493c-a585-26daf46ebaa5.lovable.app-1780431287502.png" },
     ],
     links: [
       {
