@@ -12,6 +12,10 @@ export const Route = createFileRoute("/corporate")({
     meta: [
       { title: "Formation Entreprise — Inuka Digital Africa" },
       { name: "description", content: "Programmes de formation pour entreprises, ONG et institutions gouvernementales." },
+      { property: "og:title", content: "Formation Entreprise — Inuka Digital Africa" },
+      { property: "og:description", content: "Programmes de formation pour entreprises, ONG et institutions gouvernementales." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
 });

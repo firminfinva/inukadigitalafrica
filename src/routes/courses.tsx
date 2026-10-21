@@ -10,6 +10,10 @@ export const Route = createFileRoute("/courses")({
     meta: [
       { title: "Formations — Inuka Digital Africa" },
       { name: "description", content: "Toutes les catégories de formations : IA, leadership, data, cybersécurité, développement et plus." },
+      { property: "og:title", content: "Formations — Inuka Digital Africa" },
+      { property: "og:description", content: "Toutes les catégories de formations : IA, leadership, data, cybersécurité, développement et plus." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
 });

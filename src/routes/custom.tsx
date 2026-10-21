@@ -10,6 +10,10 @@ export const Route = createFileRoute("/custom")({
     meta: [
       { title: "Formation sur mesure — Inuka Digital Africa" },
       { name: "description", content: "Demandez un programme de formation personnalisé pour vous ou votre équipe." },
+      { property: "og:title", content: "Formation sur mesure — Inuka Digital Africa" },
+      { property: "og:description", content: "Demandez un programme de formation personnalisé pour vous ou votre équipe." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
 });
