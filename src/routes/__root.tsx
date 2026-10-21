@@ -6,6 +6,7 @@ import {
   useRouter,
   HeadContent,
   Scripts,
+  type ErrorComponentProps,
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
@@ -34,7 +35,7 @@ function NotFoundComponent() {
   );
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+function ErrorComponent({ error, reset }: ErrorComponentProps) {
   console.error(error);
   const router = useRouter();
 
@@ -84,8 +85,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "Inuka Digital Africa — Future-ready training in AI, leadership & tech" },
       { name: "twitter:description", content: "Modern training academy delivering AI, leadership, data, cybersecurity, and software courses for individuals, enterprises, and governments." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c31b581e-4ff8-48df-8ac2-16a9b4883270/id-preview-770c08eb--2ad852c4-fc5e-493c-a585-26daf46ebaa5.lovable.app-1780431287502.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c31b581e-4ff8-48df-8ac2-16a9b4883270/id-preview-770c08eb--2ad852c4-fc5e-493c-a585-26daf46ebaa5.lovable.app-1780431287502.png" },
     ],
     links: [
       {

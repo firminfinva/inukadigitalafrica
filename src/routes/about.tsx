@@ -11,6 +11,10 @@ export const Route = createFileRoute("/about")({
     meta: [
       { title: "À propos — Inuka Digital Africa" },
       { name: "description", content: "Notre mission, vision et méthode pour bâtir les talents du futur en Afrique et au-delà." },
+      { property: "og:title", content: "À propos — Inuka Digital Africa" },
+      { property: "og:description", content: "Notre mission, vision et méthode pour bâtir les talents du futur en Afrique et au-delà." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
 });

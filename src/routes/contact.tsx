@@ -15,6 +15,10 @@ export const Route = createFileRoute("/contact")({
     meta: [
       { title: "Contact — Inuka Digital Africa" },
       { name: "description", content: "Joignez Inuka Digital Africa par email, WhatsApp ou réseaux sociaux. Réponse sous 24h." },
+      { property: "og:title", content: "Contact — Inuka Digital Africa" },
+      { property: "og:description", content: "Joignez Inuka Digital Africa par email, WhatsApp ou réseaux sociaux. Réponse sous 24h." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
 });
