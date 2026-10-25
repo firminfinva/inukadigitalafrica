@@ -174,3 +174,19 @@ cd <repository-name>
 npm i
 npm run dev
 ```
+
+## Local Testimonials Database
+
+Testimonials are loaded from PostgreSQL. The entire testimonials section stays hidden until the database contains at least one published row.
+
+1. Copy `.env.example` to `.env.local`.
+2. Start the local database with `docker compose up -d`.
+3. Start the app with `npm run dev`.
+
+The first database startup creates the `testimonials` table with no records. To add the example testimonial, run:
+
+```sh
+docker compose exec -T db psql -U inuka -d inuka_digital_africa < db/seed.example.sql
+```
+
+To stop PostgreSQL while keeping its data, run `docker compose down`. To delete the local database and start over, run `docker compose down -v`.

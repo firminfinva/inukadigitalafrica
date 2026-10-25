@@ -1,6 +1,8 @@
+"use client";
+
 import { Building2, Landmark, HeartHandshake, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "@tanstack/react-router";
+import Link from "next/link";
 import { useT, type TKey } from "@/lib/i18n";
 
 const audiences: { icon: typeof Building2; tKey: TKey; dKey: TKey }[] = [
@@ -21,10 +23,10 @@ export function CorporateCTA() {
           <p className="mt-4 text-muted-foreground">{t("corp.subtitle")}</p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Button asChild size="lg" className="bg-gradient-primary text-primary-foreground">
-              <Link to="/custom">{t("corp.proposal")} <ArrowRight className="ml-2 h-4 w-4" /></Link>
+              <Link href="/custom">{t("corp.proposal")} <ArrowRight className="ml-2 h-4 w-4" /></Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link to="/corporate">{t("corp.explore")}</Link>
+              <Link href="/corporate">{t("corp.explore")}</Link>
             </Button>
           </div>
         </div>

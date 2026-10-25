@@ -1,28 +1,14 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { SiteLayout } from "@/components/site/SiteLayout";
+"use client";
+
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { WhyChoose } from "@/components/site/WhyChoose";
 import { Testimonials } from "@/components/site/Testimonials";
 import { useT } from "@/lib/i18n";
 
-export const Route = createFileRoute("/about")({
-  component: AboutPage,
-  head: () => ({
-    meta: [
-      { title: "À propos — Inuka Digital Africa" },
-      { name: "description", content: "Notre mission, vision et méthode pour bâtir les talents du futur en Afrique et au-delà." },
-      { property: "og:title", content: "À propos — Inuka Digital Africa" },
-      { property: "og:description", content: "Notre mission, vision et méthode pour bâtir les talents du futur en Afrique et au-delà." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
-});
-
-function AboutPage() {
+export function AboutPage() {
   const { t } = useT();
   return (
-    <SiteLayout>
+    <>
       <section className="container mx-auto px-4 py-20">
         <SectionHeading eyebrow={t("about.eyebrow")} title={t("page.about.t")} subtitle={t("page.about.s")} />
         <div className="mx-auto grid max-w-5xl gap-5 md:grid-cols-3">
@@ -46,10 +32,7 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="container mx-auto px-4 py-20">
-        <SectionHeading eyebrow={t("page.about.voices")} title={t("page.about.stories")} />
-        <Testimonials />
-      </section>
-    </SiteLayout>
+      <Testimonials eyebrow={t("page.about.voices")} title={t("page.about.stories")} />
+    </>
   );
 }

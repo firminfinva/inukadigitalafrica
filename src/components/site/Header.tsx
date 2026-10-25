@@ -1,11 +1,15 @@
-import { Link } from "@tanstack/react-router";
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./ThemeToggle";
-import logo from "@/assets/inuka-logo-full.png.asset.json";
+import logo from "@/assets/frame-11.png";
 import { LanguageToggle } from "./LanguageToggle";
 import { useT, type TKey } from "@/lib/i18n";
+import { cn } from "@/lib/utils";
 
 const nav: { to: string; key: TKey }[] = [
   { to: "/", key: "nav.home" },
@@ -19,20 +23,24 @@ const nav: { to: string; key: TKey }[] = [
 export function Header() {
   const [open, setOpen] = useState(false);
   const { t } = useT();
+  const pathname = usePathname();
+
   return (
     <header className="fixed top-0 z-50 w-full border-b border-border/40 glass">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <Link to="/" className="flex items-center font-display text-base font-bold" aria-label="Inuka Digital Africa">
-          <img src={logo.url} alt="Inuka Digital Africa" className="h-12 w-auto object-contain" />
+        <Link href="/" className="flex items-center font-display text-base font-bold" aria-label="Inuka Digital Africa">
+          <img src={logo.src} alt="Inuka Digital Africa" className="h-12 w-auto object-contain" />
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">
           {nav.map((n) => (
             <Link
               key={n.to}
-              to={n.to}
-              className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
-              activeProps={{ className: "text-foreground" }}
+              href={n.to}
+              className={cn(
+                "rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground",
+                pathname === n.to && "text-foreground",
+              )}
             >
               {t(n.key)}
             </Link>
@@ -43,10 +51,10 @@ export function Header() {
           <LanguageToggle />
           <ThemeToggle />
           <Button asChild variant="ghost" size="sm">
-            <Link to="/contact">{t("nav.signin")}</Link>
+            <Link href="/contact">{t("nav.signin")}</Link>
           </Button>
           <Button asChild size="sm" className="bg-gradient-primary text-primary-foreground hover:opacity-90">
-            <Link to="/custom">{t("nav.cta")}</Link>
+            <Link href="/custom">{t("nav.cta")}</Link>
           </Button>
         </div>
 
@@ -65,7 +73,7 @@ export function Header() {
             {nav.map((n) => (
               <Link
                 key={n.to}
-                to={n.to}
+                href={n.to}
                 onClick={() => setOpen(false)}
                 className="rounded-md px-3 py-2 text-sm font-medium hover:bg-secondary"
               >
@@ -73,7 +81,9 @@ export function Header() {
               </Link>
             ))}
             <Button asChild className="mt-2 bg-gradient-primary text-primary-foreground">
-              <Link to="/custom" onClick={() => setOpen(false)}>{t("nav.cta")}</Link>
+              <Link href="/custom" onClick={() => setOpen(false)}>
+                {t("nav.cta")}
+              </Link>
             </Button>
           </div>
         </div>

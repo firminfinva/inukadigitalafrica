@@ -1,6 +1,8 @@
+"use client";
+
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "@tanstack/react-router";
+import Link from "next/link";
 import { useT, type TKey } from "@/lib/i18n";
 
 type Plan = {
@@ -60,7 +62,7 @@ export function Pricing() {
             className={`mt-7 ${p.highlight ? "bg-gradient-primary text-primary-foreground" : ""}`}
             variant={p.highlight ? "default" : "outline"}
           >
-            <Link to="/contact">{t(p.ctaKey)}</Link>
+            <Link href="/contact">{t(p.ctaKey)}</Link>
           </Button>
         </div>
       ))}

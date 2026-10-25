@@ -1,3 +1,5 @@
+"use client";
+
 import { GraduationCap, Wrench, Brain, CalendarRange, BadgeCheck, Globe2 } from "lucide-react";
 import { useT, type TKey } from "@/lib/i18n";
 

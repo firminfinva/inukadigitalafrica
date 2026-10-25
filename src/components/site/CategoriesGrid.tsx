@@ -1,4 +1,6 @@
-import { Link } from "@tanstack/react-router";
+"use client";
+
+import Link from "next/link";
 import { ArrowUpRight, Clock, Layers } from "lucide-react";
 import { categories } from "@/lib/site-data";
 import { useT } from "@/lib/i18n";
@@ -13,7 +15,7 @@ export function CategoriesGrid({ limit }: { limit?: number }) {
         return (
           <Link
             key={c.slug}
-            to="/courses"
+            href="/courses"
             style={{ animationDelay: `${i * 60}ms` }}
             className="group relative overflow-hidden rounded-2xl border border-border bg-gradient-card p-6 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-elegant animate-fade-up"
           >

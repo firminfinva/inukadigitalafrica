@@ -1,4 +1,6 @@
-import { Link } from "@tanstack/react-router";
+"use client";
+
+import Link from "next/link";
 import { ArrowRight, Sparkles, PlayCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImg from "@/assets/hero-ai-education.jpg";
@@ -16,18 +18,19 @@ export function Hero() {
             {t("hero.badge")}
           </span>
           <h1 className="mt-6 text-balance text-5xl font-bold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
-            {t("hero.title.1")} <span className="text-gradient">{t("hero.title.careers")}</span>{" "}
-            {t("hero.title.and")} <span className="text-gradient">{t("hero.title.orgs")}</span>{t("hero.title.end")}
+            {t("hero.title.1")} <span className="text-gradient">{t("hero.title.careers")}</span> {t("hero.title.and")}{" "}
+            <span className="text-gradient">{t("hero.title.orgs")}</span>
+            {t("hero.title.end")}
           </h1>
           <p className="mt-6 max-w-xl text-lg text-muted-foreground">{t("hero.subtitle")}</p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild size="lg" className="bg-gradient-primary text-primary-foreground shadow-glow hover:opacity-95">
-              <Link to="/courses">
+              <Link href="/courses">
                 {t("hero.explore")} <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link to="/custom">
+              <Link href="/custom">
                 <PlayCircle className="mr-2 h-4 w-4" /> {t("hero.custom")}
               </Link>
             </Button>
@@ -51,7 +54,7 @@ export function Hero() {
           <div className="absolute -inset-4 rounded-3xl bg-gradient-accent opacity-30 blur-3xl" aria-hidden />
           <div className="relative overflow-hidden rounded-3xl border border-border shadow-elegant">
             <img
-              src={heroImg}
+              src={heroImg.src}
               alt="AI and education abstract illustration"
               width={1536}
               height={1152}

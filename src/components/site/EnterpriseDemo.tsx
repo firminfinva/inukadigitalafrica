@@ -1,5 +1,7 @@
+"use client";
+
 import { useState } from "react";
-import { Link } from "@tanstack/react-router";
+import Link from "next/link";
 import { ArrowRight, BriefcaseBusiness, ClipboardList, GraduationCap, CheckCircle2, RotateCcw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -69,7 +71,7 @@ export function EnterpriseDemo() {
             )}
           </div>
         </div>
-        <div className="mt-12 text-center"><Button asChild variant="outline" className="h-auto min-h-10 whitespace-normal"><Link to="/custom">{c.cta}<ArrowRight /></Link></Button></div>
+        <div className="mt-12 text-center"><Button asChild variant="outline" className="h-auto min-h-10 whitespace-normal"><Link href="/custom">{c.cta}<ArrowRight /></Link></Button></div>
       </div>
     </section>
   );

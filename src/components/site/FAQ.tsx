@@ -1,3 +1,5 @@
+"use client";
+
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useT, type TKey } from "@/lib/i18n";
 
