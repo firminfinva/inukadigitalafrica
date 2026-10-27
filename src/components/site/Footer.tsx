@@ -56,11 +56,15 @@ export function Footer() {
           <ul className="space-y-2 text-sm text-muted-foreground">
             <li className="flex items-center gap-2">
               <Mail className="h-4 w-4" />
-              <span>hello@inukadigital.africa</span>
+              <a href="mailto:info@inukadigitalafrica.com" className="hover:text-foreground">info@inukadigitalafrica.com</a>
             </li>
             <li className="flex items-center gap-2">
               <MessageCircle className="h-4 w-4" />
-              <span>WhatsApp +000 000 000</span>
+              <a href="https://wa.me/254794263287" className="hover:text-foreground">WhatsApp +254 794 263287</a>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="w-4" aria-hidden="true" />
+              <a href="https://wa.me/243995601345" className="hover:text-foreground">WhatsApp +243 995 601345</a>
             </li>
           </ul>
           <div className="mt-4 flex gap-2">

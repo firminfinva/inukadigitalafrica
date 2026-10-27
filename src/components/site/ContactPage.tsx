@@ -23,8 +23,9 @@ export function ContactPage() {
 
       <div className="mx-auto grid max-w-5xl gap-8 lg:grid-cols-5">
         <div className="lg:col-span-2 space-y-4">
-          <ContactItem icon={Mail} label={t("ct.email")} value="hello@inukadigital.africa" href="mailto:hello@inukadigital.africa" />
-          <ContactItem icon={MessageCircle} label={t("ct.whatsapp")} value="+000 000 000" href="https://wa.me/0000000000" />
+          <ContactItem icon={Mail} label={t("ct.email")} value="info@inukadigitalafrica.com" href="mailto:info@inukadigitalafrica.com" />
+          <ContactItem icon={MessageCircle} label={t("ct.whatsapp")} value="+254 794 263287" href="https://wa.me/254794263287" />
+          <ContactItem icon={MessageCircle} label={t("ct.whatsapp")} value="+243 995 601345" href="https://wa.me/243995601345" />
           <div className="rounded-2xl border border-border bg-gradient-card p-5 shadow-card">
             <div className="text-sm font-semibold">{t("ct.follow")}</div>
             <div className="mt-3 flex gap-2">
