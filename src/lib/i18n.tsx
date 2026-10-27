@@ -41,8 +41,8 @@ export const dict = {
   "about.eyebrow": { fr: "À propos", en: "About us" },
   "about.title": { fr: "Donner aux talents les moyens de réussir le futur du travail.", en: "Empowering people to thrive in the future of work." },
   "about.subtitle": {
-    fr: "Inuka Digital Africa a été fondée pour combler l'écart entre les technologies en évolution rapide et les talents qui font avancer les organisations. Nous concevons des programmes pour les professionnels, les jeunes et les institutions prêts à mener ce qui vient.",
-    en: "Inuka Digital Africa was built to close the gap between fast-moving technology and the talent that drives organizations forward. We design programs for professionals, youth, and institutions ready to lead what comes next.",
+    fr: "Inuka Digital Africa accompagne les entreprises, les organisations et les ONG dans le développement des talents qui font avancer l'Afrique. Nous créons des formations pratiques en informatique et en intelligence artificielle pour aider les équipes à relever des défis réels, adopter les outils numériques et gagner en confiance. Chaque programme s'adapte aux objectifs de votre organisation et se déroule en ligne ou en présentiel.",
+    en: "Inuka Digital Africa helps enterprises, organizations, and NGOs grow the talent moving Africa forward. We create practical IT and artificial intelligence training that helps teams solve real challenges, adopt digital tools, and build confidence. Each program is tailored to your organization's goals and delivered online or in person.",
   },
   "about.read": { fr: "Lire notre histoire", en: "Read our story" },
   "about.b1.t": { fr: "Notre mission", en: "Our mission" },
@@ -62,8 +62,6 @@ export const dict = {
   "cat.subtitle": { fr: "De l'IA au leadership — des cursus pratiques conçus par des experts du secteur.", en: "From AI to leadership — practical curricula designed by industry experts." },
   "cat.browse": { fr: "Voir toutes les formations", en: "Browse all courses" },
   "cat.view": { fr: "Voir", en: "View" },
-  "cat.modules": { fr: "modules", en: "modules" },
-  "cat.weeks": { fr: "semaines", en: "weeks" },
   "cat.allLevels": { fr: "Tous niveaux", en: "All levels" },
   "cat.beginner": { fr: "Débutant", en: "Beginner" },
   "cat.intermediate": { fr: "Intermédiaire", en: "Intermediate" },
@@ -229,8 +227,11 @@ export const dict = {
   "page.custom.t": { fr: "Concevez votre propre parcours d'apprentissage", en: "Design your own learning journey" },
   "page.custom.s": { fr: "Partagez vos objectifs et nous concevrons un programme adapté à votre équipe, votre délai et vos résultats.", en: "Share your goals and we'll craft a program that fits your team, timeline, and outcomes." },
 
-  "page.about.t": { fr: "Construire la main-d'œuvre future de l'Afrique, une compétence à la fois", en: "Building Africa's future workforce, one skill at a time" },
-  "page.about.s": { fr: "Inuka Digital Africa a été fondée avec une conviction : la formation de classe mondiale doit être accessible à chaque apprenant ambitieux et chaque organisation tournée vers l'avenir.", en: "Inuka Digital Africa was founded with one belief: world-class training should be accessible to every ambitious learner and every forward-thinking organization." },
+  "page.about.t": { fr: "Des compétences numériques pour faire avancer l'Afrique", en: "Digital skills to move Africa forward" },
+  "page.about.s": {
+    fr: "Nous croyons que l'accès aux compétences numériques peut ouvrir de nouvelles possibilités pour chacun et renforcer les organisations. Inuka Digital Africa travaille avec les entreprises, les organisations et les ONG pour proposer à leurs employés des formations concrètes en informatique et en intelligence artificielle. De la maîtrise des outils numériques aux applications pratiques de l'IA, nos programmes sont pensés autour des réalités du travail et des objectifs de chaque équipe. En ligne ou en présentiel, chaque parcours privilégie la pratique, la confiance et des résultats directement applicables. Notre ambition est de contribuer à une Afrique où chacun peut participer à l'économie numérique et où les organisations ont les compétences nécessaires pour innover et grandir.",
+    en: "We believe digital skills can open new opportunities for people and make organizations stronger. Inuka Digital Africa works with enterprises, organizations, and NGOs to provide their employees with practical IT and artificial intelligence training. From mastering everyday digital tools to applying AI at work, our programs reflect real workplace challenges and each team's goals. Online or in person, every learning experience puts practice, confidence, and immediately useful results first. We aim to help build an Africa where everyone can participate in the digital economy and organizations have the skills to innovate and grow.",
+  },
   "page.about.what": { fr: "Ce qui nous distingue", en: "What sets us apart" },
   "page.about.modern": { fr: "Une académie moderne conçue pour l'impact", en: "A modern academy built for impact" },
   "page.about.voices": { fr: "Voix", en: "Voices" },
